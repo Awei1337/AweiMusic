@@ -1,67 +1,31 @@
-/* Общие стили */
-body {
-    background: linear-gradient(to bottom, #121212, #1a1a1a);
-    color: white;
-    font-family: "Druk Wide Cy-Bold", sans-serif;
-    text-align: center;
-    padding: 20px;
-}
+// Проигрыватель
+const audio = document.getElementById("audio");
+const playPauseBtn = document.getElementById("playPause");
+const progress = document.getElementById("progress");
 
-/* Заголовок */
-header h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #b366ff;
-}
+playPauseBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "⏸️";
+    } else {
+        audio.pause();
+        playPauseBtn.textContent = "▶️";
+    }
+});
 
-/* Обложка альбома */
-#cover {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px #b366ff;
-}
+audio.addEventListener("timeupdate", () => {
+    progress.value = (audio.currentTime / audio.duration) * 100;
+});
 
-/* Проигрыватель */
-.player {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
+progress.addEventListener("input", () => {
+    audio.currentTime = (progress.value / 100) * audio.duration;
+});
 
-.btn {
-    background: #b366ff;
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-}
+// Кнопка "Показать текст"
+const lyrics = document.getElementById("lyrics");
+const toggleLyricsBtn = document.getElementById("toggleLyrics");
 
-#progress {
-    width: 60%;
-    margin: 0 10px;
-}
-
-/* Текст песни */
-#lyrics {
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    display: none; /* Скрыт изначально */
-}
-
-/* Когда текст активен */
-#lyrics.show {
-    display: block;
-}
-
-/* Кнопка показать текст */
-#toggleLyrics {
-    margin-top: 20px;
-}
+toggleLyricsBtn.addEventListener("click", () => {
+    lyrics.classList.toggle("show");
+    toggleLyricsBtn.textContent = lyrics.classList.contains("show") ? "Скрыть текст" : "Показать текст";
+});
