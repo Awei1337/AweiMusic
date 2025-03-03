@@ -10,30 +10,31 @@
     <header>
         <h1>AweiMusic</h1>
     </header>
-<h2 id="song-title">A$AP Rocky – I Smoked Away My Brain</h2>
-    <main>
-        <!-- Обложка альбома -->
-        <img src="cover52.jpeg" alt="Обложка альбома" id="cover">
 
-        <!-- Проигрыватель -->
-        <div class="player">
-            <audio id="audio" src="music.mp3"></audio>
-            <button id="playPause" class="btn">▶️</button>
-            <input type="range" id="progress" value="0">
+    <div class="player">
+        <img id="cover" src="cover52.jpeg" alt="Обложка">
+        <h2 id="song-title">A$AP Rocky – I Smoked Away My Brain</h2>
+        <audio id="audio" src="song.mp3"></audio>
+
+        <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="play-pause">▶️</button>
+            <button id="next">⏭</button>
         </div>
 
-        <!-- Кнопка для показа текста -->
-        <button id="toggleLyrics" class="btn">Показать текст</button>
+        <input type="range" id="progress" value="0">
 
-        <!-- Блок с текстом песни (скрыт по умолчанию) -->
-        <div id="lyrics" class="hidden">
-            <pre>
+        <button id="toggle-lyrics">Показать текст</button>
+        <div id="lyrics">
+            <p>
 How did you know?
 It's what I've always wanted
 Could never have too many of these
 Will you quit kicking me under the table?
-I'm trying (I just live), will somebody make her (I live day by day)
-Shut up about it? Can we settle down, please? (Fighting demons)
+I'm trying (I just live), 
+will somebody make her (I live day by day)
+Shut up about it? 
+Can we settle down, please? (Fighting demons)
 
 I smoked away my brain, I think I'm going dumb
 Cocaine up on my gums, I think they're going numb
@@ -47,56 +48,73 @@ And now, we're swagging, making money in Manhattan, trick, what's happening?
 They try to intellect with indirection just to test you
 A rebel until my death, it's in my flesh, it's in my vessels
 
-Fuck the clique you're with, I'm finna fuck the bitch you're next to
+Fuck the clique you're with, 
+I'm finna fuck the bitch you're next to
 Fuck a metro sexual, suck a dick, I'm disrespectful
 You know the kid get it, get-get sick, spit
 Clip spit, quick split, quick hit, kids women
 Oh, that's your girl, huh? Well, I just hit it
 It's A$AP, nigga, live with it, swag
 
-Demons posted all around me, I can't beat 'em all alone
+Demons posted all around me, 
+I can't beat 'em all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
-These evil thoughts, they start to drown me
+These evil thoughts, 
+they start to drown me
 Lord, don't leave me all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
 
-Demons posted all around me, I can't beat 'em all alone
+Demons posted all around me, 
+I can't beat 'em all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
-These evil thoughts, they start to drown me
+These evil thoughts, 
+they start to drown me
 Lord, don't leave me all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
 
-Aw, yeah, aw, yeah (it's what I-, I think-)
-(Bite tongue, deep breaths) let the beat chill
-Aw, yeah, aw, yeah (it's what I-, I think-)
-(Bite tongue, deep breaths) let the beat chill
-Aw, yeah, aw, yeah (it's what I-, I think-)
-(Bite tongue, deep breaths) let the beat chill
-Aw, yeah, aw, yeah (it's what I-, I think-)
-(Bite tongue, deep breaths) hipster by heart, but I can tell you how the streets feel
+Aw, yeah, aw, yeah 
+(it's what I-, I think-)
+(Bite tongue, deep breaths) 
+let the beat chill
+Aw, yeah, aw, yeah 
+(it's what I-, I think-)
+(Bite tongue, deep breaths) 
+let the beat chill
+Aw, yeah, aw, yeah 
+(it's what I-, I think-)
+(Bite tongue, deep breaths) 
+let the beat chill
+Aw, yeah, aw, yeah 
+(it's what I-, I think-)
+(Bite tongue, deep breaths) 
+hipster by heart, but I can tell you how the streets feel
 
-Demons posted all around me, I can't beat 'em all alone
+Demons posted all around me, 
+I can't beat 'em all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
-These evil thoughts, they start to drown me
+These evil thoughts, 
+they start to drown me
 Lord, don't leave me all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
 
-Demons posted all around me, I can't beat 'em all alone
+Demons posted all around me, 
+I can't beat 'em all alone
 Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
-These evil thoughts, they start to drown me
+These evil thoughts, 
+they start to drown me
 Lord, don't leave me all alone
 Thinking 'bout you, thinking 'bout you
-Add it to your thoughts
-            </pre>
+Add it to your thought
+            </p>
         </div>
-    </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
