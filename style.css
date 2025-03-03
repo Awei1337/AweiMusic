@@ -143,6 +143,19 @@ header h1 {
     text-align: center; /* Центрируем текст */
     line-height: 1.5; /* Делаем текст более читабельным */
 }
+#lyrics {
+    max-width: 90%; /* Ограничивает ширину */
+    margin: 0 auto; /* Центрирует текст */
+    text-align: center; /* Выравнивает текст по центру */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Сохраняет переносы строк */
+    font-size: 16px; /* Настроить размер текста */
+    line-height: 1.5; /* Интервал между строками */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    border-radius: 10px; /* Закруглённые края */
+                                }
 
 /* Когда текст активен */
 #lyrics.show {
