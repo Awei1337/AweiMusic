@@ -1,26 +1,33 @@
-index.html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музыка - Awei</title>
+    <title>AweiMusic</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>AweiMusic</h1>
+    </header>
 
-    <div class="music-player">
-        <div id="cover"></div> <!-- Обложка встроена в CSS -->
-        
-        <audio controls>
-            <source src="https://files.catbox.moe/4lbs0f.mp3" type="audio/mpeg">
-            Ваш браузер не поддерживает аудиоплеер.
-        </audio>
+    <main>
+        <!-- Обложка альбома -->
+        <img src="cover52.jpeg" alt="Обложка альбома" id="cover">
 
-        <button id="toggle-lyrics">Показать текст</button>
+        <!-- Проигрыватель -->
+        <div class="player">
+            <audio id="audio" src="music.mp3"></audio>
+            <button id="playPause" class="btn">▶️</button>
+            <input type="range" id="progress" value="0">
+        </div>
 
-        <div id="lyrics-container" style="display: none;">
-            <pre id="lyrics-text">
+        <!-- Кнопка для показа текста -->
+        <button id="toggleLyrics" class="btn">Показать текст</button>
+
+        <!-- Блок с текстом песни (скрыт по умолчанию) -->
+        <div id="lyrics" class="hidden">
+            <pre>
 How did you know?
 It's what I've always wanted
 Could never have too many of these
@@ -89,9 +96,8 @@ Thinking 'bout you, thinking 'bout you
 Add it to your thoughts
             </pre>
         </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
